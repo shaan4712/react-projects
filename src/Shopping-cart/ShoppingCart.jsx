@@ -32,7 +32,7 @@ const ShoppingCart = () => {
   }
 
   const handleChange = (item,d) => {
-    let ind = -1;
+    let ind;
     cart.forEach((data,index) => {
       if(data.id === item.id)
       ind = index;
@@ -42,8 +42,7 @@ const ShoppingCart = () => {
     console.log(tempArr);
 
     if(tempArr[ind].amount === 0){
-      tempArr[ind].amount =1;
-      
+      tempArr[ind].amount = 1;
     }
     setCart([...tempArr])
   }
